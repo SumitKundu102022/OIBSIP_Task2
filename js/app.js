@@ -49,29 +49,48 @@ window.onscroll = () => {
 
 
 //email message
-const form = document.querySelector('form');
+const form = document.querySelector("#contact-form");
 const fullName = document.querySelector('#name');
 const email = document.querySelector('#email');
-const mobileNumber = document.querySelector("#Mobile number");
+const mobileNumber = document.querySelector("#MobileNumber");
 const subject = document.querySelector("#Subject");
-const message = document.querySelector("#Message");
+const mess = document.getElementById("Message");
 
 function sendEmail() {
-    const bodyMessage = `Full Name: ${fullName.value}<br> Email: ${email.value}<br> Phone Number: ${mobileNumber.value}<br> Message: ${message.value}`;
+    const bodyMessage = `Full Name: ${fullName.value}<br> Email: ${email.value}<br> Phone Number: ${mobileNumber.value}<br> Message: ${mess.value}`;
 
     Email.send({
       Host: "smtp.elasticemail.com",
       Username: "sonukumar123098567@gmail.com",
-      Password: "680EDCF6C090EF4E7EF956617D1BF1E5FD92",
+      Password: "6168AB5B8AE19551DD9C7327E63885FC9129",
       To: "sonukumar123098567@gmail.com",
       From: "sonukumar123098567@gmail.com",
       Subject: subject.value,
-      Body: bodyMessage
-    }).then((message) => alert(message));
+      Body: bodyMessage,
+    }).then((message) => {
+      if (message == "OK") {
+        Swal.fire({
+          title: "Success!",
+          text: "Message sent successfully!",
+          icon: "success",
+        });
+      }
+    });
 
+}
+
+function reset() {
+    fullName.value = "",
+    email.value = "",
+    mobileNumber.value=""
+    subject.value = "",
+    mess.value=""   
 }
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     sendEmail();
+    reset();
 });
+
+

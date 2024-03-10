@@ -44,8 +44,8 @@ I am currently pursuing my B.Tech degree in Computer Science engineering from Ha
         </p>
 
         <div class="btn-box">
-            <a href="#" class="btn">Hire Me</a>
-            <a href="#" class="btn">Let's Talk</a>
+            <a href="/data/sumitkundu.pdf" class="btn" id="download" target="_blank" download="Resume.pdf">Download</a>
+            <a href="#contact" class="btn">Let's Talk</a>
             <span class="animate" style="--i:5;"></span>
         </div>
     </div>
@@ -228,7 +228,7 @@ I am currently pursuing my B.Tech degree in Computer Science engineering from Ha
    <section class="contact" id="contact">
     <h2 class="heading">Contact <span>Me!</span><span class="animate scroll" style="--i:1;"></span></h2>
 
-    <form action="#">
+    <form action="#" id="contact-form">
         <div class="input-box">
             <div class="input-field">
                 <input type="text" placeholder="Full Name"  id="name" autocomplete="off" required >
@@ -245,7 +245,7 @@ I am currently pursuing my B.Tech degree in Computer Science engineering from Ha
 
         <div class="input-box">
             <div class="input-field">
-                <input type="tel" placeholder="Mobile Number" id="Mobile number" autocomplete="off" required >
+                <input type="tel" placeholder="Mobile Number" id="MobileNumber" autocomplete="off" required >
                 <span class="focus"></span>
             </div>
 
@@ -257,7 +257,7 @@ I am currently pursuing my B.Tech degree in Computer Science engineering from Ha
         </div>
 
         <div class="textarea-field">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" id="Message" autocomplete="off" required ></textarea>
+            <textarea name="textArea"  cols="30" rows="10" placeholder="Your Message" id="Message" autocomplete="off" required ></textarea>
             <span class="focus"></span>
             <span class="animate scroll" style="--i:4;"></span>
         </div>
@@ -283,6 +283,9 @@ I am currently pursuing my B.Tech degree in Computer Science engineering from Ha
    </footer>
     
    <script src="https://smtpjs.com/v3/smtp.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+   <script src="/js/download.js"></script>
    <script src="/js/app.js"></script>
 </body>
 </html>
